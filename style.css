@@ -93,13 +93,9 @@ section{
 
 /* imagem de fundo vinda do HTML */
 .home-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* igual background-size: cover */
-    z-index: -1;
+    background: url("teste5.png");
+    background-position: center;
+    background-size: cover;
 }
 
 .home section{
