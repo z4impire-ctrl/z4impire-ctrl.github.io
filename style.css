@@ -808,3 +808,25 @@ section{
   }
 }
 
+@media (max-width: 768px) {
+
+  .sobre-container {
+    flex-direction: column; /* 🔥 imagem em cima, texto embaixo */
+    text-align: center;
+  }
+
+  .sobre-texto h2 {
+    font-size: 30px;
+  }
+
+  .sobre-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .sobre-img img {
+    max-width: 90%;
+  }
+}
+
