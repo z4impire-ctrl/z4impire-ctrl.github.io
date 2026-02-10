@@ -408,5 +408,15 @@ section{
   transform: scale(1.08);
 }
 
+@media (max-width: 768px) {
+  .home-bg {
+    width: 80%;        /* ocupa bem a tela */
+    max-width: 320px;  /* limite pra não estourar */
+  }
+
+  .content {
+    padding: 0 16px;   /* respiro lateral */
+  }
+}
 
 
