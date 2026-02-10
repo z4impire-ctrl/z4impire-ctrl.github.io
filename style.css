@@ -471,48 +471,44 @@ section{
 
 @media screen and (max-width: 1000px) {
 
-  /* HOME */
+  /* SOMENTE O BANNER HOME */
   .home {
-    background-position: top center; /* imagem começa de cima */
+    background-position: top center; /* imagem começa do topo */
     background-size: cover;
   }
 
   .home section {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
     min-height: 100vh;
     padding-top: 7rem; /* espaço da navbar */
     text-align: center;
   }
 
-  .content {
-    margin-top: 18rem; /* empurra o texto pra baixo da imagem */
+  .home .content {
+    margin-top: 18rem; /* texto desce, imagem fica em cima */
     max-width: 100%;
     padding: 0 1rem;
   }
 
-  .content h3 {
+  .home .content h3 {
     font-size: 2.2rem;
     line-height: 1.1;
   }
 
-  .titulo {
+  .home .titulo {
     font-size: 34px;
   }
 
-  .baixa {
+  .home .baixa {
     font-size: 22px;
   }
 
-  .content p {
+  .home .content p {
     font-size: 0.9rem;
     max-width: 100%;
   }
-
-  .btn {
-    margin-top: 1.2rem;
-  }
 }
-
-
