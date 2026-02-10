@@ -102,6 +102,7 @@ section{
 }
 
 
+
 /* overlay escuro */
 .home::after {
   content: "";
@@ -122,6 +123,7 @@ section{
 .content {
   text-align: center;
 }
+
 
 .content h3{
     color: #fff;
