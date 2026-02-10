@@ -48,7 +48,6 @@ body {
 
 .menu-link:hover {
   color: red;
-  font-size: 1.1rem;
 }
 
 /* ================= GERAL ================= */
@@ -74,66 +73,33 @@ section {
   color: #fff;
 }
 
-/* ================= HERO (IGUAL AO EXEMPLO) ================= */
+/* ================= HOME (IGUAL AO EXEMPLO) ================= */
 
 .home {
   margin-top: 80px;
-}
-
-/* não limita a home */
-.home section {
-  max-width: none;
-  padding: 0;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 80px);
-  overflow: hidden;
-}
-
-/* imagem ocupa tudo */
-.home-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* degradê lateral escuro (EXEMPLO) */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
   background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9) 30%,
-    rgba(0, 0, 0, 0.55) 55%,
-    rgba(0, 0, 0, 0.1) 75%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  z-index: 1;
+      to right,
+      rgba(0, 0, 0, 0.9) 35%,
+      rgba(0, 0, 0, 0.55) 60%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("img/teste5.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.home section {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 80px);
 }
 
 /* conteúdo à esquerda */
-.hero .content {
-  position: relative;
-  z-index: 2;
-
-  height: 100%;
-  max-width: 620px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding-left: 90px;
-  text-align: left;
+.content {
+  max-width: 600px;
 }
 
-/* textos hero */
+/* textos */
 .titulo {
   font-size: 3.2rem;
   color: #fff;
@@ -151,31 +117,27 @@ section {
   margin-top: 8px;
 }
 
-.hero .content p {
+.content p {
   color: #ccc;
   font-size: 0.9rem;
   line-height: 1.4;
-  max-width: 480px;
+  max-width: 450px;
   margin: 25px 0;
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-  .hero {
-    height: auto;
-    min-height: 100vh;
+  .home {
+    background: rgba(0, 0, 0, 0.75),
+      url("img/teste5.png");
+    background-size: cover;
+    background-position: center;
   }
 
-  .hero .content {
-    padding: 0 20px;
-    max-width: 100%;
+  .content {
     text-align: center;
-    align-items: center;
-  }
-
-  .hero::after {
-    background: rgba(0, 0, 0, 0.75);
+    margin: 0 auto;
   }
 }
 
@@ -191,34 +153,4 @@ section {
   color: red;
 }
 
-.sobre .row {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.imag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.imag img {
-  max-width: 400px;
-}
-
-.contente {
-  color: white;
-  max-width: 750px;
-}
-
-.contente h3 {
-  font-size: 3rem;
-}
-
-.contente p {
-  font-size: 1.1rem;
-}
-
-/* footer, mapa, características etc seguem iguais */
+/* (o resto do seu CSS continua igual, sem conflito) */
