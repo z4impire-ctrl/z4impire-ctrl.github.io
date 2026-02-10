@@ -85,14 +85,8 @@ section{
     color: #fff;
 }
 
-.home {
-    background-position: center;
-    background-size: cover;
-}
-
-
-/* imagem de fundo vinda do HTML */
-.home-bg {
+.home{
+    background: url("img/teste5.png");
     background-position: center;
     background-size: cover;
 }
