@@ -707,5 +707,104 @@ section{
     gap: 2.5rem;
     text-align: center;
   }
+ .imag-donos img {
+    max-width: 85%;
+  }
 
-  .im
+  .texto-dono h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .texto-dono p {
+    font-size: 0.95rem;
+  }
+
+  /* =====================
+     MAPA
+     ===================== */
+  .mapa iframe {
+    height: 280px;
+  }
+
+  /* =====================
+     FOOTER
+     ===================== */
+  .footer-info {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  /* =====================
+     AJUSTE GLOBAL DE TEXTO
+     ===================== */
+  p {
+    font-size: 0.92rem;
+    line-height: 1.7;        /* deixa o texto esticado */
+    letter-spacing: 0.02em; /* tira efeito de bolha */
+    max-width: 34rem;       /* evita bloco gigante */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2, h3 {
+    line-height: 1.25;
+    letter-spacing: 0.04em; /* títulos mais retos */
+  }
+
+  /* =====================
+     HOME
+     ===================== */
+  .home .titulo {
+    font-size: 1.9rem;
+    letter-spacing: 0.08em;
+  }
+
+  .home .baixa {
+    font-size: 1.15rem;
+    letter-spacing: 0.06em;
+  }
+
+  .home .content p {
+    margin-top: 0.8rem;
+  }
+
+  /* =====================
+     SOBRE
+     ===================== */
+  .contente h3 {
+    font-size: 1.75rem;
+    letter-spacing: 0.06em;
+  }
+
+  .contente p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  /* =====================
+     DONO
+     ===================== */
+  .texto-dono h2 {
+    font-size: 1.95rem;
+    letter-spacing: 0.07em;
+  }
+
+  .texto-dono p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  /* =====================
+     CARACTERÍSTICAS
+     ===================== */
+  .caracteristicas .item p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+
