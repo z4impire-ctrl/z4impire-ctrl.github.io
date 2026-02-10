@@ -512,3 +512,98 @@ section{
     max-width: 100%;
   }
 }
+
+@media screen and (max-width: 1000px) {
+
+  /* ------------------------------
+     GERAL: espaçamento e alinhamento
+     ------------------------------ */
+  body {
+    font-size: 1rem; /* base confortável */
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  h3, .titulo {
+    text-align: center;
+    line-height: 1.2em;
+  }
+
+  /* ------------------------------
+     HOME (banner principal)
+     ------------------------------ */
+  .home {
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .home section {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 7rem;
+  }
+
+  .home .content {
+    margin-top: 16rem;
+    width: 90%;
+    padding: 0;
+  }
+
+  .home .titulo {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .home .baixa {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .home .content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .home .btn {
+    padding: 0.9rem 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ------------------------------
+     SEÇÕES EM COLUNA (texto/imagens)
+     ------------------------------ */
+  .sobre .row,
+  .dono {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .imag img,
+  .imag-donos img {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .conteudo,
+  .texto-dono {
+    width: 90%;
+  }
+
+  /* ------------------------------
+     MAPA & FOOTER
+     ------------------------------ */
+  .mapa iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .footer-info {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+}
