@@ -87,20 +87,17 @@ section{
 
 .home{
     background: url("img/teste5.png");
-    background-position: center;
     background-size: cover;
-}
-
-.home-bg{
     background-position: center;
-    background-size: cover;
+    margin-top: 80px; /* ✅ compensa navbar fixa */
 }
 
 .home section{
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
 }
+
 
 .content{
     max-width: 60rem;
