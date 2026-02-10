@@ -239,34 +239,8 @@ section:not(.home section) {
     height: 40px;
   }
 
-  .home {
-    height: calc(100vh - 70px);
-    margin-top: 70px;
-  }
-
-  .home section {
-    justify-content: center;
-    text-align: center;
-  }
-
   .content {
     padding: 0 1rem;
-  }
-
-  .titulo {
-    font-size: 2.2rem;
-  }
-
-  .baixa {
-    font-size: 1.2rem;
-  }
-
-  .content p {
-    font-size: 0.95rem;
-  }
-
-  section:not(.home section) {
-    padding: 2.5rem 1rem;
   }
 
   .sobre .row,
