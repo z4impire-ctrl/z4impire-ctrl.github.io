@@ -90,6 +90,11 @@ section{
     background-size: cover;
 }
 
+.home{
+    background-position: center;
+    background-size: cover;
+}
+
 .home section{
     display: flex;
     align-items: center;
