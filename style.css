@@ -1,263 +1,349 @@
-/* RESET */
+/* RESET + ANIMAÇÕES ORIGINAIS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-transform: capitalize;
-    transition: 0.4s ease; /* 🔥 animações suaves VOLTARAM */
+    transition: 1.0s linear; /* ✅ SUAS ANIMAÇÕES VOLTARAM */
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior: smooth;
 }
 
 body {
-  background: #000;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
+    background: black;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* ✅ evita scroll lateral no mobile */
 }
 
 /* ================= NAVBAR ================= */
 .navegacao {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 100;
 }
 
+/* LOGO */
 .logo {
-  height: 50px;
+    height: 50px;
 }
 
+/* MENU */
 .menu {
-  list-style: none;
-  display: flex;
-  gap: 2.5rem;
+    list-style: none;
+    display: flex;
+    gap: 3rem;
 }
 
+/* LINKS */
 .menu-link {
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu-link:hover {
+    color: #ff0000;
+    font-size: 1.3rem;
+}
+
+/* ================= SECTIONS ================= */
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ================= BOTÃO ================= */
+.btn{
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #000;
+    transition: all 0.4s ease;
+}
+
+.btn:hover{
+    letter-spacing: 0.1rem;
+    background: #000;
+    color: #fff;
 }
 
 /* ================= HOME / BANNER ================= */
-.home {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 80px);
-  margin-top: 80px;
-  overflow: hidden;
+.home{
+    background: url("img/teste5.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px; /* ✅ compensa navbar fixa */
 }
 
-/* imagem do banner */
-.home-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* 🔥 cobre a tela */
-  object-position: center;    /* 🔥 centraliza */
-  z-index: -2;
+.home section{
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 80px);
 }
 
-/* overlay escuro */
-.home::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: -1;
+/* TEXTO DO BANNER */
+.content{
+    max-width: 60rem;
 }
 
-/* conteúdo sobre a imagem */
-.home section {
-  height: 100%;
-  display: flex;
-  align-items: center;
+.content h3{
+    color: #fff;
+    font-size: 3rem;
+    max-width: 600px;
+    line-height: 0.9;
 }
 
-/* texto do banner */
-.content {
-  max-width: 600px;
-  padding: 0 2rem;
+.prime{
+    color: red;
 }
 
-.titulo {
-  font-size: 3rem;
-  color: #fff;
-  line-height: 1.1;
-}
-
-.prime {
-  color: red;
+.titulo{
+    font-size: 48px;
+    color: #fff;
 }
 
 .baixa {
-  display: block;
-  font-size: 1.6rem;
-  color: #ddd;
-  margin-top: 0.5rem;
+    display: block;
+    font-size: 32px;
+    color: #ddd;
 }
 
-.content p {
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 1rem 0;
+.content p{
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 250;
+    line-height: 1.2;
+    padding: 1rem 0;
+    max-width: 450px;
 }
 
-.btn {
-  display: inline-block;
-  background: #fff;
-  color: #000;
-  padding: 0.9rem 2.5rem;
-  text-decoration: none;
-  border: 2px solid #000;
+/* ================= TÍTULOS ================= */
+.tittle{
+    font-size: 3.8rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-/* ================= SECTIONS GERAIS ================= */
-section:not(.home section) {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-
-.tittle {
-  font-size: 3rem;
-  text-align: center;
-  color: #fff;
-}
-
-.tittle span {
-  color: red;
+.tittle span{
+    color: red;
 }
 
 /* ================= SOBRE ================= */
-.sobre .row {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
+.sobre .row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.imag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .imag img {
-  max-width: 380px;
+    max-width: 400px;
+    height: auto;
 }
 
-.contente {
-  color: #fff;
+.contente{
+    font-size: 2rem;
+    max-width: 750px;
+    line-height: 0.9;
+    color: white;
 }
 
-.contente h3 {
-  font-size: 2.5rem;
+.contente h3{
+    font-size: 3rem;
 }
 
-.contente p {
-  font-size: 1rem;
-  line-height: 1.5;
+.contente p{
+    font-size: 1.1rem;
+}
+
+.ctprime{
+    color: red;
 }
 
 /* ================= CARACTERÍSTICAS ================= */
 .caracteristicas {
-  text-align: center;
+    padding: 35px 20px;
+    text-align: center;
+    background-color: #000;
 }
 
 .caracteristicas-grid {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.caracteristicas .item {
+    transition: transform 0.3s ease;
+}
+
+.caracteristicas .item:hover {
+    transform: scale(1.06);
 }
 
 .caracteristicas .item img {
-  width: 45px;
+    width: 45px;
 }
 
 .caracteristicas .item p {
-  color: #fff;
-  font-size: 0.9rem;
+    font-size: 13px;
+    color: #fff;
 }
 
 /* ================= DONOS ================= */
-.dono {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  flex-direction: row-reverse;
+.dono{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row-reverse;
 }
 
-.texto-dono {
-  color: #fff;
-  max-width: 350px;
+.texto-dono{
+    color: white;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    max-width: 340px;
 }
 
-.texto-dono h2 {
-  font-size: 2.6rem;
+.texto-dono h2{
+    font-size: 3.4rem;
 }
 
-.imag-donos img {
-  max-width: 480px;
+.redd{
+    color: red;
+}
+
+.imag-donos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+}
+
+.imag-donos img{
+    max-width: 510px;
+    height: auto;
 }
 
 /* ================= MAPA ================= */
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
 .mapa iframe {
-  width: 100%;
-  max-width: 1000px;
-  height: 420px;
-  border-radius: 12px;
+    width: 90%;
+    max-width: 1000px;
+    height: 450px;
+    border-radius: 12px;
 }
 
 /* ================= FOOTER ================= */
 .footer {
-  text-align: center;
-  padding: 3rem 1rem;
-  color: #fff;
+    background: #000;
+    color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
 }
 
 .footer-logo img {
-  max-width: 200px;
+    max-width: 220px;
 }
 
-/* ================= MOBILE ================= */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* ================= WHATSAPP ================= */
+.whta {
+    width: 220px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.whta:hover {
+    transform: scale(1.08);
+}
+
+/* ================= MOBILE (AJUSTES SEM QUEBRAR) ================= */
 @media (max-width: 768px) {
 
-  .navegacao {
-    height: 70px;
-    padding: 0 1rem;
-  }
+    /* 🔥 FOCO CORRETO DO BANNER NO CELULAR */
+    .home{
+        background-position: center top;
+    }
 
-  .menu {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
+    .home section{
+        justify-content: center;
+        text-align: center;
+    }
 
-  .logo {
-    height: 40px;
-  }
+    .titulo{
+        font-size: 2.2rem;
+    }
 
-  .content {
-    padding: 0 1rem;
-  }
+    .baixa{
+        font-size: 1.2rem;
+    }
 
-  .sobre .row,
-  .dono {
-    flex-direction: column;
-    text-align: center;
-  }
+    .sobre .row,
+    .dono{
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .imag img,
-  .imag-donos img {
-    max-width: 100%;
-  }
+    .imag,
+    .imag-donos{
+        height: auto;
+    }
 
-  .mapa iframe {
-    height: 300px;
-  }
+    .imag img,
+    .imag-donos img{
+        max-width: 100%;
+    }
+
+    .mapa iframe{
+        height: 300px;
+    }
 }
