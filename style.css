@@ -12,7 +12,7 @@ html {
 body {
   background: #000;
   font-family: Arial, sans-serif;
-  overflow-x: hidden; /* evita scroll lateral no mobile */
+  overflow-x: hidden;
 }
 
 /* ================= NAVBAR ================= */
@@ -45,29 +45,27 @@ body {
   font-weight: 600;
 }
 
-.menu-link:hover {
-  color: red;
-}
-
-/* ================= HOME ================= */
+/* ================= HOME / BANNER ================= */
 .home {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
   margin-top: 80px;
   overflow: hidden;
 }
 
+/* imagem do banner */
 .home-bg {
-  position: center;
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  object-fit: cover;          /* 🔥 cobre a tela */
+  object-position: center;    /* 🔥 centraliza */
   z-index: -2;
 }
 
+/* overlay escuro */
 .home::after {
   content: "";
   position: absolute;
@@ -76,12 +74,14 @@ body {
   z-index: -1;
 }
 
+/* conteúdo sobre a imagem */
 .home section {
-  min-height: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
+/* texto do banner */
 .content {
   max-width: 600px;
   padding: 0 2rem;
@@ -120,13 +120,8 @@ body {
   border: 2px solid #000;
 }
 
-.btn:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* ================= SECTIONS ================= */
-section {
+/* ================= SECTIONS GERAIS ================= */
+section:not(.home section) {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
@@ -227,16 +222,11 @@ section {
   max-width: 200px;
 }
 
-/* ================= WHATSAPP ================= */
-.whta {
-  width: 200px;
-  margin: 0 auto;
-}
-
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .navegacao {
+    height: 70px;
     padding: 0 1rem;
   }
 
@@ -249,13 +239,14 @@ section {
     height: 40px;
   }
 
-  section {
-    padding: 2.5rem 1rem;
+  .home {
+    height: calc(100vh - 70px);
+    margin-top: 70px;
   }
 
-  .home-bg {
-    object-fit: cover;
-    object-position: center top;
+  .home section {
+    justify-content: center;
+    text-align: center;
   }
 
   .content {
@@ -274,6 +265,10 @@ section {
     font-size: 0.95rem;
   }
 
+  section:not(.home section) {
+    padding: 2.5rem 1rem;
+  }
+
   .sobre .row,
   .dono {
     flex-direction: column;
@@ -283,5 +278,9 @@ section {
   .imag img,
   .imag-donos img {
     max-width: 100%;
+  }
+
+  .mapa iframe {
+    height: 300px;
   }
 }
