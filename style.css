@@ -28,6 +28,7 @@ body {
     padding: 1rem 2rem;
     z-index: 100;
     background-color: var(white);
+    height: 80px;
 }
 
 /* LOGO */
@@ -88,10 +89,10 @@ section{
 .home {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px); /* desconta a navbar */
+    margin-top: 80px;               /* empurra pra baixo */
     overflow: hidden;
 }
-
 /* imagem de fundo vinda do HTML */
 .home-bg {
     position: absolute;
@@ -104,10 +105,19 @@ section{
     background-size: cover
 }
 
-.home section{
+.home section {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
 }
 
 .content{
