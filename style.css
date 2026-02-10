@@ -95,13 +95,11 @@ section{
 
 /* imagem do banner */
 .home-bg {
-  width: 200px;        /* ajusta o tamanho */
-  max-width: 80%;
-  margin: 0 auto 20px; /* centraliza e dá espaço embaixo */
+  width: 280px;        /* tamanho bom no PC */
+  max-width: 90%;
+  margin: 0 auto 20px;
   display: block;
 }
-
-
 
 /* overlay escuro */
 .home::after {
