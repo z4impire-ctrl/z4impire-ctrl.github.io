@@ -85,8 +85,7 @@ section{
     color: #fff;
 }
 
-.home{
-    background: url("teste5.png");
+.home-bg{
     background-position: center;
     background-size: cover;
 }
