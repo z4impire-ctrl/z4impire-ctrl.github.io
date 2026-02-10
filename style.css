@@ -85,18 +85,41 @@ section{
     color: #fff;
 }
 
-.home{
-    background: url("img/teste5.png");
-    background-size: cover;
-    background-position: center;
-    margin-top: 80px; /* ✅ compensa navbar fixa */
+.home {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  overflow: hidden;
 }
 
-.home section{
-    display: flex;
-    align-items: center;
-    min-height: calc(100vh - 80px);
+/* imagem do banner */
+.home-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 🔥 cobre a tela */
+  object-position: center;    /* 🔥 centraliza */
+  z-index: -2;
 }
+
+/* overlay escuro */
+.home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* conteúdo sobre a imagem */
+.home section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 
 
 .content{
