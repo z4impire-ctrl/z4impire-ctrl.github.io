@@ -410,7 +410,7 @@ section{
 
 @media (max-width: 868px) {
 .home-bg {
-    width: 80%;        /* ocupa bem a tela */
+    width: 90%;        /* ocupa bem a tela */
     max-width: 320px;  /* limite pra não estourar */
   }
     
