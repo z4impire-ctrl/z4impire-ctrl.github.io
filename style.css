@@ -114,11 +114,12 @@ section{
 /* 🔥 IMAGEM COMO BANNER DE ACADEMIA */
 .home-bg {
   width: 100%;
-  max-width: 700px;   /* impacto real */
+  max-width: 900px;   /* impacto forte */
   height: auto;
   display: block;
   margin: 0 auto 40px;
 }
+
 
 .content h3{
     color: #fff;
@@ -415,3 +416,10 @@ section{
 .home::after {
   display: none;
 }
+
+/* HOME não pode ser limitada como as outras sections */
+.home section {
+  max-width: none;
+  padding: 80px 20px;
+}
+
