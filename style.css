@@ -388,6 +388,86 @@ section{
   transform: scale(1.08);
 }
 
+@media (max-width: 768px) {
+
+  /* GERAL */
+  section {
+    padding: 2rem 1rem;
+  }
+
+  /* HOME */
+  .home section {
+    flex-direction: column;
+    justify-content: center;
+    min-height: auto;
+    padding-top: 6rem; /* espaço da navbar */
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content h3 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .titulo {
+    font-size: 32px;
+  }
+
+  .baixa {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  /* SOBRE */
+  .sobre .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imag {
+    height: auto;
+  }
+
+  .imag img {
+    max-width: 90%;
+  }
+
+  /* DONOS */
+  .dono {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imag-donos {
+    height: auto;
+  }
+
+  .imag-donos img {
+    max-width: 90%;
+  }
+
+  .texto-dono {
+    max-width: 100%;
+  }
+
+  .texto-dono h2 {
+    font-size: 2.2rem;
+  }
+
+  /* NAVBAR */
+  .menu {
+    gap: 1.2rem;
+    font-size: 0.9rem;
+  }
+}
 
 
 
