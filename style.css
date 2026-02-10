@@ -56,11 +56,13 @@ body {
     font-size: 1.3rem;
     transition: 0.5s linear;
 }
-
+@media (max-width: 768px) {
 section{
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
+    padding: 2rem 1rem;
+}
 }
 
 .btn{
@@ -85,8 +87,9 @@ section{
     background: #000;
     color: #fff;
 }
-
+@media (max-width: 768px) {
 .home {
+     min-height: calc(100vh - 80px);
     position: relative;
     width: 100%;
     min-height: calc(100vh - 80px); /* desconta a navbar */
@@ -102,9 +105,12 @@ section{
     height: 100%;
     object-fit: cover; /* igual background-size: cover */
     z-index: -1;
-    background-size: cover
+    background-size: cover;
+    object-position: center top; /* mostra mais da imagem */
+    object-fit: contain;
+    background-color: black;
 }
-
+}
 .home section {
     display: flex;
     align-items: center;
