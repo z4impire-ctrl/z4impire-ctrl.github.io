@@ -91,7 +91,6 @@ section{
   height: calc(100vh - 80px);
   margin-top: 80px;
   overflow: hidden;
-  padding: 40px 0;
 }
 
 /* imagem do banner */
