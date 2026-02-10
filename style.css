@@ -423,3 +423,69 @@ section{
   padding: 80px 20px;
 }
 
+/* =========================
+   HERO / HOME (BANNER)
+========================= */
+
+/* HOME não herda limites globais */
+.home section {
+  max-width: none;
+  padding: 0;
+}
+
+/* container do banner */
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* imagem base */
+.home-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* overlay escuro estilo academia */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* texto em cima da imagem */
+.hero .content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* garante contraste */
+.hero .content h3,
+.hero .content p,
+.hero .content a {
+  color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero .content h3 {
+    font-size: 2.2rem;
+  }
+
+  .hero .content p {
+    font-size: 0.85rem;
+  }
+}
