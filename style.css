@@ -1,419 +1,287 @@
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-transform: capitalize;
-    transition: 1.0s linear;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background: black;
-    font-family: Arial, sans-serif;
+  background: #000;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* evita scroll lateral no mobile */
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navegacao {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    z-index: 100;
-    background-color: var(white);
-    height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
 }
 
-/* LOGO */
 .logo {
-    height: 50px;
+  height: 50px;
 }
 
-/* MENU */
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 3rem;
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
 }
 
-/* LINKS */
 .menu-link {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
 }
 
 .menu-link:hover {
-    color: #ff0000; /* pode trocar pela cor da Ct Prime */
-    font-size: 1.3rem;
-    transition: 0.5s linear;
-}
-@media (max-width: 768px) {
-section{
-    padding: 3rem 2rem;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 2rem 1rem;
-}
+  color: red;
 }
 
-.btn{
-     background: rgba(255, 255, 255, 0.9);
-    color: #000;
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-
-    border: 2px solid #000;
-    transition: all 0.4s ease; /* 👈 importante */
-}
-
-.btn:hover{
-    transition: 0.5s linear;
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    background: #000;
-    color: #fff;
-}
-@media (max-width: 768px) {
+/* ================= HOME ================= */
 .home {
-     min-height: calc(100vh - 80px);
-    position: relative;
-    width: 100%;
-    min-height: calc(100vh - 80px); /* desconta a navbar */
-    margin-top: 80px;               /* empurra pra baixo */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  overflow: hidden;
 }
-/* imagem de fundo vinda do HTML */
+
 .home-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* igual background-size: cover */
-    z-index: -1;
-    background-size: cover;
-    object-position: center top; /* mostra mais da imagem */
-    object-fit: contain;
-    background-color: black;
-}
-}
-.home section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
 }
 
 .home::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
 }
 
-.content{
-    max-width: 60rem;
+.home section {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.content h3{
-    color: #fff;
-    font-size: 3rem;
-    max-width: 600px;
-    line-height: 0.9;
+.content {
+  max-width: 600px;
+  padding: 0 2rem;
 }
 
-.prime{
-    color: red;
+.titulo {
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1.1;
 }
 
-.titulo{
-    font-size: 48px;
-    color: #fff;
+.prime {
+  color: red;
 }
 
 .baixa {
-    display: block;
-    font-size: 32px;
-    color: #ddd;
+  display: block;
+  font-size: 1.6rem;
+  color: #ddd;
+  margin-top: 0.5rem;
 }
 
-.content p{
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 250;
-    line-height: 1.2;
-    padding: 1rem 0;
-    max-width: 450px;
+.content p {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1rem 0;
 }
 
-.tittle{
-    font-size: 3.8rem;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 0.9rem 2.5rem;
+  text-decoration: none;
+  border: 2px solid #000;
 }
 
-.tittle span{
-    color: red;
-    text-transform: uppercase;
+.btn:hover {
+  background: #000;
+  color: #fff;
 }
 
-.sobre .row{
-    display: flex;
-    align-items: center;
-    background-color: var(black);
-    gap: 1.5rem;
-
+/* ================= SECTIONS ================= */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
-.imag {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
-    height: 100vh;           /* Define altura total da tela (opcional) */
+.tittle {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.tittle span {
+  color: red;
+}
+
+/* ================= SOBRE ================= */
+.sobre .row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .imag img {
-    max-width: 400px;        /* Define o tamanho menor da imagem */
-    height: auto;            /* Mantém a proporção da imagem */
+  max-width: 380px;
 }
 
-.contente{
-    font-size: 2rem;
-    max-width: 750px;
-    line-height: 0.9;
-    color: white;
+.contente {
+  color: #fff;
 }
 
-.contente h3{
-    font-size: 3rem;
-    line-height: 1;
+.contente h3 {
+  font-size: 2.5rem;
 }
 
-.contente p{
-    font-size: 1.1rem;
+.contente p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.ctprime{
-    color: red;
-}
-
-
-
+/* ================= CARACTERÍSTICAS ================= */
 .caracteristicas {
-  padding: 35px 20px;
   text-align: center;
-  background-color: #000000;
-}
-
-.caracteristicas h2 {
-  font-size: 29px;
-  margin-bottom: 25px;
-  color: #fffefe;
-}
-
-.caracteristicas h2 span {
-  color: #ffffff;
 }
 
 .caracteristicas-grid {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 3rem;
   flex-wrap: wrap;
-}
-
-.caracteristicas .item {
-  transition: transform 0.3s ease;
-}
-
-.caracteristicas .item:hover {
-  transform: scale(1.06);
 }
 
 .caracteristicas .item img {
   width: 45px;
-  margin-bottom: 8px;
 }
 
 .caracteristicas .item p {
-  font-size: 13px;
-  color: #ffffff;
-  line-height: 1.3;
+  color: #fff;
+  font-size: 0.9rem;
 }
 
-.texto-dono{
-   color: white;          /* cor do texto */
-   font-size: 0.7rem;     /* tamanho da letra */
-   font-weight: 250;      /* espessura da fonte */
-   line-height: 1.2;      /* espaçamento entre linhas */
-   padding: 2rem 0;       /* espaço interno em cima e embaixo */
-   max-width: 340px;      /* largura máxima do texto */
-
-}
-
-.texto-dono h2{
-    font-size: 3.4rem;
-    line-height: 1;
-    display: block;
-}
-
-.redd{
-    color: red;
-}
-
-.dono{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-direction: row-reverse;
-
-}
-
-.imag-donos{
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
-    height: 50rem;    
-}
-
-.imag-donos img{
-    max-width: 510px;        /* Define o tamanho menor da imagem */
-    height: auto;            /* Mantém a proporção da imagem */
-}
-
-.mapa {
+/* ================= DONOS ================= */
+.dono {
   display: flex;
-  justify-content: center;
-  margin: 3rem 0;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: row-reverse;
 }
 
+.texto-dono {
+  color: #fff;
+  max-width: 350px;
+}
+
+.texto-dono h2 {
+  font-size: 2.6rem;
+}
+
+.imag-donos img {
+  max-width: 480px;
+}
+
+/* ================= MAPA ================= */
 .mapa iframe {
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
-  height: 450px;
-  border: 0;
+  height: 420px;
   border-radius: 12px;
 }
 
-
+/* ================= FOOTER ================= */
 .footer {
-  background: #000;
-  color: #fff;
-  padding: 4rem 1rem;
   text-align: center;
-  font-family: Arial, sans-serif;
+  padding: 3rem 1rem;
+  color: #fff;
 }
 
 .footer-logo img {
-  max-width: 220px;
-  margin-bottom: 2rem;
+  max-width: 200px;
 }
 
-.footer-line {
-  border: none;
-  height: 1px;
-  background: #fff;
-  opacity: 0.3;
-  margin: 2.5rem auto;
-  max-width: 1100px;
-}
-
-.footer-social p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-icons a {
-  width: 50px;
-  height: 50px;
-  background: #fff; /* círculo branco */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  transform: scale(1.1);
-}
-
-.social-icons img {
-  width: 24px;
-  height: auto;
-}
-
-.footer-info {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.footer-info p {
-  margin: 0.4rem 0;
-}
-
-.footer-info .empresa,
-.footer-info .cnpj {
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-@media (max-width: 600px) {
-  .footer-logo img {
-    max-width: 180px;
-  }
-
-  .social-icons a {
-    width: 44px;
-    height: 44px;
-  }
-}
-
+/* ================= WHATSAPP ================= */
 .whta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 220px;        /* tamanho médio */
-  max-width: 90%;     /* mobile ok */
-  margin: 0 auto;     /* centraliza */
-
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  width: 200px;
+  margin: 0 auto;
 }
 
-.whta img {
-  width: 100%;
-  height: auto;
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .navegacao {
+    padding: 0 1rem;
+  }
+
+  .menu {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+  .home-bg {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  .titulo {
+    font-size: 2.2rem;
+  }
+
+  .baixa {
+    font-size: 1.2rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .sobre .row,
+  .dono {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imag img,
+  .imag-donos img {
+    max-width: 100%;
+  }
 }
-
-.whta:hover {
-  transform: scale(1.08);
-}
-
-
-
