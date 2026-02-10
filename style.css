@@ -607,3 +607,105 @@ section{
   }
 
 }
+
+@media screen and (max-width: 1000px) {
+
+  /* =====================
+     AJUSTES GERAIS MOBILE
+     ===================== */
+  section {
+    padding: 2.5rem 1.2rem;
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  /* =====================
+     HOME (banner principal)
+     ===================== */
+  .home {
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .home section {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 7rem;
+    text-align: center;
+  }
+
+  .home .content {
+    margin-top: 15rem;
+    max-width: 100%;
+  }
+
+  .home .titulo {
+    font-size: 2rem; /* ↓ menor e elegante */
+    margin-bottom: 0.3rem;
+  }
+
+  .home .baixa {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .home .content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* =====================
+     SOBRE (imagem + texto)
+     ===================== */
+  .sobre .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .imag img {
+    max-width: 85%;
+  }
+
+  .contente h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .contente p {
+    font-size: 1rem;
+  }
+
+  /* =====================
+     CARACTERÍSTICAS
+     ===================== */
+  .caracteristicas h2 {
+    font-size: 1.7rem;
+  }
+
+  .caracteristicas-grid {
+    gap: 2rem;
+  }
+
+  .caracteristicas .item p {
+    font-size: 0.9rem;
+  }
+
+  /* =====================
+     DONO (imagem + texto)
+     ===================== */
+  .dono {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .im
