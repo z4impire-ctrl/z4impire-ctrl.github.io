@@ -66,9 +66,9 @@ section{
 
 .btn{
      background: rgba(255, 0, 0, 0.9);
-    color: #000;
+    color: #FF0000;
     padding: 1rem 3rem;
-    font-size: 2rem;
+    font-size: 4rem;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
