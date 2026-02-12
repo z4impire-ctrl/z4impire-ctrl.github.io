@@ -112,11 +112,6 @@ section{
 
 .prime {
     color: red;
-    border: 2px solid #fff;
-    padding: 4px 12px;       /* espaço interno */
-    border-radius: 8px;      /* cantos arredondados */
-    display: inline-block;   /* faz a borda respeitar só a palavra */
-    font-weight: bold;
 }
 
     
