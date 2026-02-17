@@ -480,6 +480,11 @@ section{
 @media screen and (max-width: 1000px) {
 
   /* SOMENTE O BANNER HOME */
+
+    .prime{
+         -webkit-text-stroke: 1.2px white; /* contorno branco */
+    font-weight: bold;
+    }
   .home {
     background-position: top center; /* imagem começa do topo */
     background-size: cover;
