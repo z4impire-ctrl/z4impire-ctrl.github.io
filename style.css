@@ -112,6 +112,8 @@ section{
 
 .prime {
     color: red;
+     -webkit-text-stroke: 2px white; /* contorno branco */
+    font-weight: bold;
 }
 
     
