@@ -235,19 +235,19 @@ section{
    color: white;          /* cor do texto */
    font-size: 0.7rem;     /* tamanho da letra */
    font-weight: 250;      /* espessura da fonte */
-   line-height: 1.2;      /* espaçamento entre linhas */
+   line-height: 1.6;      /* espaçamento entre linhas */
    padding: 2rem 0;       /* espaço interno em cima e embaixo */
-   max-width: 390px;      /* largura máxima do texto */
+   max-width: 480px;      /* largura máxima do texto */
 
 }
 
 .texto-dono p {
-    max-width: 4500px;
+    max-width: 480px;
 }
 
 .texto-dono h2{
     font-size: 3.4rem;
-    line-height: 1;
+    line-height: 1,;
     display: block;
     max-width: 400px;
 }
@@ -720,10 +720,12 @@ section{
   .texto-dono h2 {
     font-size: 2rem;
     margin-bottom: 0.8rem;
+    line-height: 1,3;
   }
 
   .texto-dono p {
     font-size: 0.95rem;
+    max-width: 480px;
   }
 
   /* =====================
