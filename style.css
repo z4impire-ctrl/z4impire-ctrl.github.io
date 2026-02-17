@@ -241,10 +241,15 @@ section{
 
 }
 
+.texto-dono p {
+    max-width: 4500px;
+}
+
 .texto-dono h2{
     font-size: 3.4rem;
     line-height: 1;
     display: block;
+    max-width: 400px;
 }
 
 .redd{
